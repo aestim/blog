@@ -1,3 +1,13 @@
+---
+title: Essential Real Estate PF Terms for Data Analysts 
+description: A comprehensive guide to core real estate project financing terms through the lens of data modeling and risk analysis. 
+date: 2026-01-21 
+tags: ["Real Estate", "Project Finance", "Data Analysis", "Risk Modeling"]
+published: true
+---
+
+
+
 # [Glossary] Essential Real Estate PF Terms for Data Analysts
 
 For a data analyst, the ability to influence business decisions starts with mastering the "language of the domain." In the world of **Real Estate Project Financing (PF)**, the data is only as good as the analyst's understanding of the underlying financial structures.
