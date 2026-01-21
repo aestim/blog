@@ -92,7 +92,7 @@ Building a dynamic, interactive map is a fantastic way to showcase a portfolio o
 3. Map Centering "Race Condition" on Marker Click
 * Problem: Clicking a new marker while the map was still zoomed in from a previous interaction caused a conflict between the **setLevel** and **panTo** animations, resulting in the map failing to center correctly.
 
-* Solution: The fix was to remove the animation from the zoom command by changing **map.setLevel(5, ```{ animate: true }```)** to just **map.setLevel(5)**. This makes the zoom level change instantly, allowing the pan animation to execute smoothly without conflict.
+* Solution: The fix was to remove the animation from the zoom command by changing **map.setLevel(5, ``{ animate: true }``)** to just **map.setLevel(5)**. This makes the zoom level change instantly, allowing the pan animation to execute smoothly without conflict.
 
 
 4. Dynamic Viewport: Auto-Fitting Markers on Filter Change
