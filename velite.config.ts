@@ -1,4 +1,6 @@
 import { defineConfig, defineCollection, s } from "velite";
+import remarkMath from 'remark-math'
+import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -38,6 +40,7 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug,
+      rehypeKatex,
       [rehypePrettyCode, { theme: "github-dark" }],
       [
         rehypeAutolinkHeadings,
@@ -50,6 +53,6 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [],
+    remarkPlugins: [remarkMath],
   },
 });
