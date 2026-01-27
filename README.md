@@ -58,7 +58,7 @@ Content is managed in the `content` directory using MDX files. Velite processes 
 
 **Minsung Kim**
 
-- [GitHub](https://github.com/noodlemin)
+- [GitHub](https://github.com/aestim)
 - [LinkedIn](https://www.linkedin.com/in/minkimdg/)
 - [Personal Site](https://minsungkim.pro)
 
