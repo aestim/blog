@@ -4,9 +4,9 @@ export const siteConfig = {
   description: "Nextjs 14 blog using velite, tailwind, and shadcn",
   author: "Minsung Kim",
   links:{
-    github: "https://github.com/noodlemin",
+    github: "https://github.com/aestim",
     linkedin: "https://www.linkedin.com/in/minkimdg/",
-    personalSite: "https://minsungkim.pro",
+    personalSite: "https://minsung.dev",
   },
 };
 
