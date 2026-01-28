@@ -17,8 +17,8 @@ export function MainNav() {
       <Link
         href="/blog"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/blog" ? "text-foreground" : "text-foreground/60"
+          "text-sm font-medium transition-colors py-2 px-4 rounded-full hover:bg-accent/50 hidden sm:inline-block",
+          pathname === "/blog" ? "text-foreground bg-accent/50" : "text-foreground/60"
         )}
       >
         Blog
@@ -26,8 +26,8 @@ export function MainNav() {
       <Link
         href="/about"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/about" ? "text-foreground" : "text-foreground/60"
+          "text-sm font-medium transition-colors py-2 px-4 rounded-full hover:bg-accent/50 hidden sm:inline-block",
+          pathname === "/about" ? "text-foreground bg-accent/50" : "text-foreground/60"
         )}
       >
         About

@@ -12,11 +12,11 @@ export function Tag({ tag, current, count }: TagProps) {
     <Link
       className={badgeVariants({
         variant: current ? "default" : "secondary",
-        className: "no-underline rounded-md",
+        className: "no-underline rounded-md px-3 py-1 text-sm",
       })}
       href={`/tags/${slug(tag)}`}
     >
-      {tag} {count ? `(${count})` : null}
+      {tag} {count ? <span className="ml-1 text-xs font-normal opacity-70">({count})</span> : null}
     </Link>
   );
 }

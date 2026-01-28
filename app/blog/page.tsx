@@ -44,13 +44,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       </div>
       <div className="grid grid-cols-12 gap-3 mt-8">
         <div className="col-span-12 col-start-1 sm:col-span-8">
-          <hr />
           {displayPosts?.length > 0 ? (
-            <ul className="flex flex-col">
+            <ul className="flex flex-col gap-4">
               {displayPosts.map((post) => {
                 const { slug, date, title, description, tags } = post;
                 return (
-                  <li key={slug}>
+                  <li key={slug} className="group relative rounded-xl border bg-card text-card-foreground shadow-sm hover:shadow-md transition-all p-6">
                     <PostItem
                       slug={slug}
                       date={date}

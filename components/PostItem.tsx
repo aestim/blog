@@ -4,6 +4,8 @@ import { buttonVariants } from "./ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./Tag";
 
+import { siteConfig } from "@/config/site"; // Added import
+
 interface PostItemProps {
   slug: string;
   title: string;
@@ -20,31 +22,32 @@ export function PostItem({
   tags,
 }: PostItemProps) {
   return (
-    <article className="flex flex-col gap-2 border-border border-b py-3">
+    <article className="flex flex-col gap-4 py-2">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <Calendar className="h-4 w-4" />
+        <time dateTime={date}>{formatDate(date)}</time>
+      </div>
+
       <div>
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-2xl font-bold leading-tight hover:underline decoration-2 underline-offset-4">
           <Link href={"/" + slug}>{title}</Link>
         </h2>
+        <div className="mt-2 text-muted-foreground leading-relaxed">
+          {description}
+        </div>
       </div>
-      <div className="flex gap-2">
-        {tags?.map((tag) => (
-          <Tag tag={tag} key={tag} />
-        ))}
-      </div>
-      <div className="max-w-none text-muted-foreground">{description}</div>
-      <div className="flex justify-between items-center">
-        <dl>
-          <dt className="sr-only">Published On</dt>
-          <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
-            <Calendar className="h-4 w-4" />
-            <time dateTime={date}>{formatDate(date)}</time>
-          </dd>
-        </dl>
+
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto pt-2">
+        <div className="flex flex-wrap gap-2">
+          {tags?.map((tag) => (
+            <Tag tag={tag} key={tag} />
+          ))}
+        </div>
         <Link
           href={"/" + slug}
-          className={cn(buttonVariants({ variant: "link" }), "py-0")}
+          className={cn(buttonVariants({ variant: "link" }), "px-0 h-auto font-semibold")}
         >
-          Read more →
+          {siteConfig.ui.readMore}
         </Link>
       </div>
     </article>
